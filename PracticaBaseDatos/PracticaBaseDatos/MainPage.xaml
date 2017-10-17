@@ -4,8 +4,8 @@
              xmlns:local="clr-namespace:PracticaBaseDatos"
              x:Class="PracticaBaseDatos.MainPage">
 
-	<Label Text="Welcome to Xamarin Forms!" 
+	<Button Text="Crear Tabla" 
            VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+           HorizontalOptions="Center" Clicked="Button_Clicked"/>
 
 </ContentPage>

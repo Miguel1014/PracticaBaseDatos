@@ -12,19 +12,15 @@ namespace PracticaBaseDatos
 
         int matricula;
         string nombre;
-        string ape_pat;
-        string ape_mat;
-        string calle;
-        int num_calle;
-        string colonia;
-        int cod_postal;
-        string municipio;
-        string estado;
-        int num_telefono;
+        string apellidos;
+        string direccion;
+        long telefono;
         string carrera;
-        string semestre;
-        string email;
-        string git;
+        int semestre;
+        string correo;
+        string github;
+
+
 
         [PrimaryKey, MaxLength(8), Unique]
         public int Matricula
@@ -40,83 +36,56 @@ namespace PracticaBaseDatos
             set { nombre = value; }
         }
 
-        [MaxLength(50), Column("Apellido Paterno")]
-        public string Ape_Pat
+        [MaxLength(50)]
+        public string Apellidos
         {
-            get { return ape_pat; }
-            set { ape_pat = value; }
+            get { return apellidos; }
+            set { apellidos = value; }
         }
-        [MaxLength(50), Column("Apellido Materno")]
-        public string Ape_Mat
+
+        [MaxLength(80)]
+        public string Direccion
         {
-            get { return ape_mat; }
-            set { ape_mat = value; }
+            get { return direccion; }
+            set { direccion = value; }
         }
-        [MaxLength(35)]
-        public string Calle
+
+        [MaxLength(10)]
+        public long Telefono
         {
-            get { return calle; }
-            set { calle = value; }
+            get { return telefono; }
+            set { telefono = value; }
         }
-        [MaxLength(4), Column("Numero de Calle")]
-        public int Num_calle
-        {
-            get { return num_calle; }
-            set { num_calle = value; }
-        }
-        [MaxLength(40)]
-        public string Colonia
-        {
-            get { return colonia; }
-            set { colonia = value; }
-        }
-        [MaxLength(5), Column("Codigo Postal")]
-        public int Cod_Postal
-        {
-            get { return cod_postal; }
-            set { cod_postal = value; }
-        }
-        [MaxLength(45)]
-        public string Municipio
-        {
-            get { return municipio; }
-            set { municipio = value; }
-        }
-        [MaxLength(45)]
-        public string Estado
-        {
-            get { return estado; }
-            set { estado = value; }
-        }
-        [MaxLength(12)]
-        public int Telefono
-        {
-            get { return num_telefono; }
-            set { num_telefono = value; }
-        }
-        [MaxLength(15)]
+
+        [MaxLength(30)]
         public string Carrera
         {
             get { return carrera; }
             set { carrera = value; }
         }
-        [MaxLength(15)]
-        public string Semestre
+
+        [MaxLength(2)]
+        public int Semestre
         {
             get { return semestre; }
             set { semestre = value; }
         }
+
+
+
         [MaxLength(40)]
-        public string Email
+        public string Correo
         {
-            get { return email; }
-            set { email = value; }
+            get { return correo; }
+            set { correo = value; }
         }
-        [MaxLength(30)]
-        public string Git
+
+        [MaxLength(50)]
+        public string Github
         {
-            get { return git; }
-            set { git = value; }
+            get { return github; }
+            set { github = value; }
         }
+
     }
 }
